@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/test-website-build/favicon.svg" />
+
+    <script>
+        (function () {
+            const redirect = sessionStorage.redirect;
+
+            if (redirect) {
+                delete sessionStorage.redirect;
+                const redirectUrl = new URL(redirect);
+                history.replaceState(null, null, redirectUrl.pathname + redirectUrl.search + redirectUrl.hash);
+            }
+        })();
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <title>AcQuity Legal</title>
+    <meta name="og:image" content="https://snarlymonke.github.io/test-website-build/og-image.png"/>
+    <script type="module" crossorigin src="/test-website-build/assets/index-BFr6IUZF.js"></script>
+    <link rel="stylesheet" crossorigin href="/test-website-build/assets/index-DSAg2xBI.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
